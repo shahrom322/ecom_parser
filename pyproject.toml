@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ecom-parser"
+version = "0.1.0"
+description = ""
+authors = ["Шахром Касимов <s.kasimov@relines.ru>"]
+readme = "README.md"
+packages = [{include = "ecom_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+scrapy = "^2.9.0"
+pydantic = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
