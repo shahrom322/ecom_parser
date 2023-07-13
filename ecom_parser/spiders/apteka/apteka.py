@@ -8,7 +8,6 @@ from scrapy.http import HtmlResponse
 from ecom_parser.models.product import ProductData
 from ecom_parser.settings import ZENROW_PROXY
 from ecom_parser.spiders.apteka.serializers import ProductResponseData
-from ecom_parser.spiders.apteka.settings import settings
 
 logger = getLogger(__name__)
 
@@ -21,7 +20,6 @@ PRODUCT_SECTIONS_LIST_CSS = 'li[itemprop=itemListElement] a span span::text'
 
 class AptekaSpider(Spider):
     name = 'apteka'
-    settings = settings
 
     default_cookies = {'city': '92'}  # Дефолтное значение для региона - Томск
     default_meta = {'proxy': ZENROW_PROXY}
